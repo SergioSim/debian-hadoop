@@ -75,7 +75,7 @@ vagrant@bullseye:~$ start-yarn.sh
 
 Symptom: the `vagrant up` command succeeded but Hadoop processes didn't start.
 
-If you are running for the first time:
+> If you are running for the first time:
 
 Try to reinstall the vagrant box:
 
@@ -83,4 +83,20 @@ Try to reinstall the vagrant box:
 vagrant up --provision
 ```
 
-Else, if it was working previously - try to start Hadoop.
+> Else, if it was working previously - try to start Hadoop.
+
+## Updating configuration files
+
+To apply changes done in `config/vagrant` - run the `prerequisites` provisioner:
+
+```bash
+vagrant provision --provision-with prerequisites
+```
+
+To apply changes done in `config/hadoop` - run the `install_hadoop` provisioner:
+
+```bash
+vagrant provision --provision-with install_hadoop
+```
+
+> Warning: this will format HDFS (removing all files on HDFS)
