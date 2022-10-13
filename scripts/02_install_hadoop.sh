@@ -54,6 +54,11 @@ fi
 
 __log "Removing Hadoop data directory"
 rm -rf /tmp/hadoop-vagrant
+rm -rf /var/hadoop
+
+__log "Creating Hadoopo data directory"
+mkdir /var/hadoop
+chown -R vagrant /var/hadoop
 
 __log "Formatting the Hadoop filesystem"
 su -l vagrant -c "yes | hdfs namenode -format"

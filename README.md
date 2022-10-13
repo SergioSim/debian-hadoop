@@ -10,11 +10,77 @@ An Debian vagrant box with Hadoop
 
 ## Getting started
 
-Starting the vagrant box
-- vagrant up
+Install & start the vagrant box:
 
-Connecting to the vagrant box
-- vagrant ssh
+```bash
+$ vagrant up
+```
 
-Stoping the vagrant box
-- vagrant halt
+Connect to the vagrant box (VM):
+
+```bash
+$ vagrant ssh
+```
+
+## Useful vagrant commands
+
+Check the vagrant box (VM) status:
+
+```bash
+$ vagrant status
+```
+> You can also check the status of all vagrant boxes you have installed with `vagrant global-status`.
+
+Power-off the vagrant box:
+
+```bash
+$ vagrant halt
+```
+
+Remove the vagrant box from disk:
+
+```bash
+$ vagrant destroy
+```
+
+## Health check
+
+Once you have installed, started and connected to the vagrant box.
+
+Check if Hadoop processes started:
+
+```bash
+vagrant@bullseye:~$ jps
+```
+
+The command should output something like:
+
+```
+4416 DataNode
+4978 NodeManager
+4580 SecondaryNameNode
+5351 Jps
+4873 ResourceManager
+4287 NameNode
+```
+
+> If no Hadoop processes show, try to start Hadoop:
+
+```bash
+vagrant@bullseye:~$ start-dfs.sh
+vagrant@bullseye:~$ start-yarn.sh
+```
+
+## Troubleshooting
+
+Symptom: the `vagrant up` command succeeded but Hadoop processes didn't start.
+
+If you are running for the first time:
+
+Try to reinstall the vagrant box:
+
+```bash
+vagrant up --provision
+```
+
+Else, if it was working previously - try to start Hadoop.
