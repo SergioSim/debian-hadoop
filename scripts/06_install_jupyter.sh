@@ -14,4 +14,4 @@ __log "Installing pip"
 apt-get install -y python3-pip
 
 __log "Installing jupyter notebooks"
-su -l vagrant -c "pip3 install notebook"
+su -l vagrant -c "pip3 install notebook pyspark"
