@@ -43,6 +43,12 @@ Remove the vagrant box from disk:
 $ vagrant destroy
 ```
 
+Start jupyer notebook:
+
+```bash
+$ jupyter notebook --ip=0.0.0.0
+```
+
 ## Health check
 
 Once you have installed, started and connected to the vagrant box.

@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
-  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 8888, host: 8888
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -84,5 +84,6 @@ Vagrant.configure("2") do |config|
       "SPARK_VERSION"     => "3.3.0-bin-hadoop3",
       "SPARK_DOWNLOAD_URL" => "https://dlcdn.apache.org/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz"
     }
+  config.vm.provision "install_jupyter", type: "shell", path: "scripts/06_install_jupyter.sh"
   
 end
