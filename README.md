@@ -53,7 +53,7 @@ $ jupyter notebook --ip=0.0.0.0
 
 Once you have installed, started and connected to the vagrant box.
 
-Check if Hadoop processes started:
+Check if Hadoop processes (HDFS & YARN) are running:
 
 ```bash
 vagrant@bullseye:~$ jps
@@ -70,7 +70,7 @@ The command should output something like:
 4287 NameNode
 ```
 
-> If no Hadoop processes show, try to start Hadoop:
+> If no Hadoop processes show up, try to start Hadoop:
 
 ```bash
 vagrant@bullseye:~$ start-dfs.sh
