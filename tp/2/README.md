@@ -9,7 +9,7 @@ For this task, you will need to execute the same map/reduce program several time
 a stopping condition (all nodes black), passing its previous output data as input data
 for the new run every time.
 
-Please note the format of the initial file.
+Please note the format of the initial file (`graph_input.txt`).
 
 This format follows the Hadoop standard: one key;value pair per line, with a
 tab between the key and the value.
