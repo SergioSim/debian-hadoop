@@ -51,3 +51,10 @@ network (for all possible couples of distinct users).
 
 ## TP 3 - Graph Breadth-first search
 
+The objective of this exercise is to re-implement the Graph breadth-first search
+algorithm seen in [TP2](../2/README.md#tp-2---graph-breadth-first-search) using Spark.
+
+## TP 3 - Sales Analysis
+
+The objective of this exercise is to re-implement the sales analysis application seen in
+[TP1](../1/README.md#tp-1---sales-analysis) using Spark.
