@@ -23,11 +23,11 @@ For the exercises, each group will have to choose it's `code_module` between (`B
 Questions:
 
 - How many students have your `code_module` in total?
-- How many students have passed (`final_result == PASS`) in total?
-- How many students have passed (`final_result == PASS`) in the 2014B group (`code_presentation == 2014B`)?
-- How many students have passed (`final_result == PASS`) in the 2014J group (`code_presentation == 2014J`)?
+- How many students have passed (`final_result == Pass`) in total?
+- How many students have passed (`final_result == Pass`) in the 2014B group (`code_presentation == 2014B`)?
+- How many students have passed (`final_result == Pass`) in the 2014J group (`code_presentation == 2014J`)?
 - What is the average `studied_credits` of male students (`gender == M`) and female students (`gender == F`) in the 2014J group
-(`code_presentation == 2014J`) that have a HE Qualification or an A level or equivalent (`highest_education == HE Qualification or highest_education == A level or equivalent`)
+(`code_presentation == 2014J`) that have a HE Qualification or an A level or equivalent (`highest_education == HE Qualification or highest_education == A level or Equivalent`)
 - Replace the `age_band` column with the minimum value ("0-35" => 0, "35-55" => 35, "55<=" => 55) and compute it's average.
 - Compute the repartition of `final_result` by `gender`, then by `highest_education`.
 
