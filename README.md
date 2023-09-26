@@ -4,9 +4,9 @@ An Debian vagrant box with Hadoop
 
 ## Prerequisites
 
-- install [virtualbox 6.1](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
-  with extension pack (version 7 is not yet fully supported)
-- install [vagrant](https://www.vagrantup.com/)
+- Install [virtualbox 7.0.10](https://www.virtualbox.org/wiki/Downloads)
+  with the [extension pack 7.0.10](https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack)
+- Install [vagrant](https://www.vagrantup.com/)
 
 ## Getting started
 
@@ -43,7 +43,7 @@ Remove the vagrant box from disk:
 $ vagrant destroy
 ```
 
-Start jupyer notebook:
+Start jupyter notebook:
 
 ```bash
 $ jupyter notebook --ip=0.0.0.0

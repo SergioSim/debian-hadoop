@@ -77,14 +77,14 @@ Vagrant.configure("2") do |config|
   config.vm.provision "prerequisites", type: "shell", path: "scripts/01_prerequisites.sh"
   config.vm.provision "install_hadoop", type: "shell", path: "scripts/02_install_hadoop.sh", env:
     {
-      "HADOOP_VERSION"     => "3.3.4",
-      "HADOOP_DOWNLOAD_URL" => "https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz"
+      "HADOOP_VERSION"     => "3.3.6",
+      "HADOOP_DOWNLOAD_URL" => "https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz"
     }
   
   config.vm.provision "install_spark", type: "shell", path: "scripts/03_install_spark.sh", env:
     {
-      "SPARK_VERSION"     => "3.3.1-bin-hadoop3",
-      "SPARK_DOWNLOAD_URL" => "https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz"
+      "SPARK_VERSION"     => "3.5.0-bin-hadoop3",
+      "SPARK_DOWNLOAD_URL" => "https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz"
     }
   config.vm.provision "install_jupyter", type: "shell", path: "scripts/06_install_jupyter.sh"
   
