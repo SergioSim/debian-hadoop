@@ -38,6 +38,9 @@ Questions:
 - List distinct `activity_type`s available in the course (`studentInfo` & `vle`).
 - Compute the total `sum_click` by distinct `activity_type`s performed by students that have 
   your selected `code_module` (`studentInfo` & `studentVle` & `vle`).
+- Compute the mean TMA (`assessment_type`) assessment `score` by `gender` for students
+  that registered (`date_registration`) after day -3 and unregistered (`date_unregistration`)
+  before day 160. (`studentInfo` & `studentRegistration` & `studentAssessment` & `assessments`)
 
 
 ## Prediction
