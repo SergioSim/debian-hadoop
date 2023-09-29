@@ -34,8 +34,8 @@ Questions:
 
 ## Statistics with Joins
 
-- Compute the total `sum_click` by student that have your selected `code_module`. (`studentInfo` & `studentVle`)
-- List distinct `activity_type`s available in the course (`studentInfo` & `vle`)
+- Compute the total `sum_click` by `region` that have your selected `code_module` (`studentVle` & `studentInfo`).
+- List distinct `activity_type`s available in the course (`studentInfo` & `vle`).
 - Compute the total `sum_click` by distinct `activity_type`s performed by students that have 
   your selected `code_module` (`studentInfo` & `studentVle` & `vle`).
 
