@@ -20,11 +20,11 @@ SPARK_DIR="spark-$SPARK_VERSION"
 cd /usr/local
 if [[ ! -f $SPARK_ARCHIVE ]]; then
     __log "Downloading Spark installation archive"
-    wget "$SPARK_DOWNLOAD_URL"
+    wget --progress=dot:giga "$SPARK_DOWNLOAD_URL"
 fi
 if [[ ! -d $SPARK_DIR ]]; then
     __log "Extracting Spark installation archive"
-    tar zxvf "$SPARK_ARCHIVE"
+    tar zxf "$SPARK_ARCHIVE"
     rm -f spark
     ln -sf "$SPARK_DIR" spark
 fi

@@ -19,11 +19,11 @@ HADOOP_DIR="hadoop-$HADOOP_VERSION"
 cd /usr/local
 if [[ ! -f $HADOOP_ARCHIVE ]]; then
     __log "Downloading Hadoop installation archive"
-    wget "$HADOOP_DOWNLOAD_URL"
+    wget --progress=dot:giga "$HADOOP_DOWNLOAD_URL"
 fi
 if [[ ! -d $HADOOP_DIR ]]; then
     __log "Extracting Hadoop installation archive"
-    tar zxvf "$HADOOP_ARCHIVE"
+    tar zxf "$HADOOP_ARCHIVE"
     rm -f hadoop
     ln -sf "$HADOOP_DIR" hadoop
     rm -f hadoop/etc/hadoop/*.cmd hadoop/sbin/*.cmd hadoop/bin/*.cmd
@@ -39,6 +39,7 @@ chown vagrant:vagrant /home/vagrant/.ssh/*
 
 __log "Updating Hadoop configuration files"
 cp /vagrant/config/hadoop/* /usr/local/hadoop/etc/hadoop
+sed -i "s/HOSTNAME/$(hostname)/g" /usr/local/hadoop/etc/hadoop/core-site.xml
 
 __log "Giving vagrant user ownership over Hadoop"
 chown -R vagrant:vagrant "/usr/local/$HADOOP_DIR"
