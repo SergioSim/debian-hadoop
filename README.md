@@ -11,7 +11,7 @@ An Debian vagrant box with Hadoop
 
 ## Getting started
 
-Install & start the vagrant box:
+**Install & start the vagrant box using VirtualBox:**
 
 Navigate to the debian-hadoop directory and run the following command:
 
@@ -19,7 +19,13 @@ Navigate to the debian-hadoop directory and run the following command:
 $ vagrant up
 ```
 
-Connect to the vagrant box (VM):
+**Install & start the vagrant box using Docker:**
+
+```bash
+$ vagrant up --provider docker
+```
+
+**Connect to the vagrant box (VM):**
 
 ```bash
 $ vagrant ssh
