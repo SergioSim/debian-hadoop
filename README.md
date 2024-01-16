@@ -82,7 +82,7 @@ vagrant@bullseye:~$ start-yarn.sh
 
 ## Troubleshooting
 
-Symptom: the `vagrant up` command succeeded but Hadoop processes didn't start.
+**Symptom: the `vagrant up` command succeeded but Hadoop processes didn't start.**
 
 > If you are running for the first time:
 
@@ -93,6 +93,15 @@ vagrant up --provision
 ```
 
 > Else, if it was working previously - try to start Hadoop.
+
+**Symptom: the `vagrant ssh` command fails with `Permission denied (publickey)`.**
+
+1. Get the location of your vagrant ssh private key: `vagrant ssh-config`
+   Then copy the path of the IdentityFile 
+2. Run the following command instead of `vagrant ssh` to connect to the VM:
+   ```bash
+   ssh -i path/to/identity/file/private_key -p 2222 vagrant@127.0.0.1
+   ```
 
 ## Updating configuration files
 
