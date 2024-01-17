@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "debian/bullseye64"
-  config.vm.box_version = "11.20220912.1"
+  config.vm.box = "ubuntu/jammy64"
+  config.vm.box_version = "20240115.0.0"
   config.vm.define VM_NAME
 
   # Disable automatic box update checking. If you disable this, then
@@ -35,6 +35,18 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   config.vm.network "forwarded_port", guest: 8888, host: 8888
   config.vm.network "forwarded_port", guest: 4040, host: 4040
+
+  # yarn.nodemanager.webapp.address (NodeManager web ui)
+  # config.vm.network "forwarded_port", guest: 8042, host: 8042
+  #
+  # yarn.resourcemanager.webapp.address (ResourceManager web ui)
+  # config.vm.network "forwarded_port", guest: 8088, host: 8088
+  #
+  # dfs.datanode.http.address (DataNode web ui)
+  # config.vm.network "forwarded_port", guest: 9864, host: 9864
+  #
+  # dfs.namenode.http-address (namenode web ui)
+  # config.vm.network "forwarded_port", guest: 9870, host: 9870
 
 
   # Create a private network, which allows host-only access to the machine
@@ -65,10 +77,8 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provider "docker" do |d, override|
-    override.vm.box = nil
+    override.vm.box = "tknerr/baseimage-ubuntu-22.04"
     override.vm.box_version = "1.0.0"
-    d.image = "tknerr/baseimage-ubuntu:20.04"
-    d.has_ssh = true
   end
 
   #
