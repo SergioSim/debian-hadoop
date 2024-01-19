@@ -35,7 +35,7 @@ Questions:
 ## Statistics with Joins
 
 - Compute the total `sum_click` by `region` that have your selected `code_module` (`studentVle` & `studentInfo`).
-- List distinct `activity_type`s available in the course (`studentInfo` & `vle`).
+- List distinct `activity_type`s accessed by students in the course (`studentVle` & `vle`).
 - Compute the total `sum_click` by distinct `activity_type`s performed by students that have 
   your selected `code_module` (`studentInfo` & `studentVle` & `vle`).
 - Compute the mean TMA (`assessment_type`) assessment `score` by `gender` for students
