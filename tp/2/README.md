@@ -31,20 +31,20 @@ Please make sure to implement your program so that each intermediary step
 
 In this exercise we reiterate over the previous one, however, instead of using Hadoop's
 (`Input`/`Output`)`Format` classes we will be using our own
-`GraphNodeInputFormat`/`GraphNodeOutputFormat` classes along with a custom writable
+`GraphInputFormat`/`GraphOutputFormat` classes along with a custom writable
 type `GraphNodeWritable`.
 
-To get started quickly, we provide you with the implementation of `GraphNodeInputFormat`
-and `GraphNodeOutputFormat`; thus it remains to implement the `GraphNodeWritable` class
+To get started quickly, we provide you with the implementation of `GraphInputFormat`
+and `GraphutputFormat`; thus it remains to implement the `GraphNodeWritable` class
 and adapt the previously implemented `Driver`, `Mapper` and `Reducer` classes to use the
-`GraphNodeInputFormat`, `GraphNodeOutputFormat` and `GraphNodeWritable` classes.
+`GraphInputFormat`, `GraphOutputFormat` and `GraphNodeWritable` classes.
 
 - The `GraphNodeWritable` class must implement the following method:
   ```java
   public String get_serialized()
   ```
   which should return a serialized string describing the graph node (you pick the format);
-  this method is called by the provided `GraphNodeOutputFormat` class.
+  this method is called by the provided `GraphOutputFormat` class.
 - The `GraphNodeWritable` class must also must have the following constructor:
   ```java
   public GraphNodeWritable(String data)
