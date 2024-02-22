@@ -37,10 +37,10 @@ Questions:
 1. Compute the total `sum_click` by `region` that have your selected `code_module` (`studentVle` & `studentInfo`).
 2. List distinct `activity_type`s accessed by students in the course (`studentVle` & `vle`).
 3. Compute the total `sum_click` by distinct `activity_type`s performed by students that have 
-  your selected `code_module` (`studentInfo` & `studentVle` & `vle`).
+   your selected `code_module` (`studentInfo` & `studentVle` & `vle`).
 4. Compute the mean TMA (`assessment_type`) assessment `score` by `gender` for students
-  that registered (`date_registration`) after day -3 and unregistered (`date_unregistration`)
-  before day 160. (`studentInfo` & `studentRegistration` & `studentAssessment` & `assessments`)
+   that registered (`date_registration`) after day -3 and unregistered (`date_unregistration`)
+   before day 160. (`studentInfo` & `studentRegistration` & `studentAssessment` & `assessments`)
 
 
 ## 4.1.4 Prediction
@@ -71,7 +71,7 @@ Next, start a Jupyter notebook as in
 
 ## 4.2.2 Computing some statistics
 
-1 Load the dataset into a Spark Dataframe.
+1. Load the dataset into a Spark Dataframe.
 2. Retrieve the number of rows.
 3. Drop the `Year` and `VistID` columns.
 4. Compute the distribution of the `Clicked` column. Is there an imbalance?
