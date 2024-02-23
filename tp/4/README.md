@@ -154,3 +154,9 @@ We remember the following:
 - It contains the string "Password"
 - It's between 9-13 characters long.
 - It consists of only upper and lower case letters [a-zA-Z] and `!`.
+
+Simpler version:
+
+- The md5 sum is `23453a62372b537c2acf48b8d8caeff1`
+- It's 11 characters long.
+- It consists of only upper and lower case letters [a-zA-Z] and `!`.
