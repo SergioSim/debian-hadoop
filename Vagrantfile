@@ -92,7 +92,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "install_spark", type: "shell", path: "scripts/03_install_spark.sh", env:
     {
       "SPARK_VERSION"     => "3.5.0-bin-hadoop3",
-      "SPARK_DOWNLOAD_URL" => "https://www.apache.org/dyn/closer.lua/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz"
+      "SPARK_DOWNLOAD_URL" => "https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz"
     }
   config.vm.provision "install_jupyter", type: "shell", path: "scripts/06_install_jupyter.sh"
   
