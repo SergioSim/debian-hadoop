@@ -27,7 +27,7 @@ Questions:
 5. How many students have passed (`final_result == Pass`) in the 2014B group (`code_presentation == 2014B`)?
 6. How many students have passed (`final_result == Pass`) in the 2014J group (`code_presentation == 2014J`)?
 7. What is the average `studied_credits` of male students (`gender == M`) and female students (`gender == F`) in the 2014J group
-(`code_presentation == 2014J`) that have a HE Qualification or an A level or equivalent (`highest_education == HE Qualification or highest_education == A level or Equivalent`)
+(`code_presentation == 2014J`) that have a HE Qualification or an A level or equivalent (`highest_education == HE Qualification or highest_education == A Level or Equivalent`)
 8. Replace the `age_band` column with the minimum value ("0-35" => 0, "35-55" => 35, "55<=" => 55) and compute it's average.
 9. Compute the repartition of `final_result` by `gender`, then by `highest_education`.
 
