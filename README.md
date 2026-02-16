@@ -5,7 +5,7 @@ An Debian vagrant box with Hadoop
 ## Prerequisites
 
 - Install a git client (for example [git SCM](https://git-scm.com/download/win)) and clone this repository: `git clone https://github.com/SergioSim/debian-hadoop.git`
-- Install [virtualbox 7.0.10](https://www.virtualbox.org/wiki/Downloads)
+- Install [virtualbox](https://www.virtualbox.org/wiki/Downloads)
   with the [extension pack 7.0.10](https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack)
 - Install [vagrant](https://www.vagrantup.com/)
 

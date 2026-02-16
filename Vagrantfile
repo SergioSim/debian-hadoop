@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "debian/bullseye64"
-  config.vm.box_version = "11.20220912.1"
+  config.vm.box = "generic/debian12"
+  config.vm.box_version = "4.3.12"
   config.vm.define VM_NAME
 
   # Disable automatic box update checking. If you disable this, then
@@ -67,7 +67,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "docker" do |d, override|
     override.vm.box = nil
     override.vm.box_version = "1.0.0"
-    d.image = "tknerr/baseimage-ubuntu:20.04"
+    d.image = "tknerr/baseimage-ubuntu:24.04"
     d.has_ssh = true
   end
 
@@ -85,14 +85,14 @@ Vagrant.configure("2") do |config|
   config.vm.provision "prerequisites", type: "shell", path: "scripts/01_prerequisites.sh"
   config.vm.provision "install_hadoop", type: "shell", path: "scripts/02_install_hadoop.sh", env:
     {
-      "HADOOP_VERSION"     => "3.3.6",
-      "HADOOP_DOWNLOAD_URL" => "https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz"
+      "HADOOP_VERSION"     => "3.4.2",
+      "HADOOP_DOWNLOAD_URL" => "https://dlcdn.apache.org/hadoop/common/hadoop-3.4.2/hadoop-3.4.2.tar.gz"
     }
   
   config.vm.provision "install_spark", type: "shell", path: "scripts/03_install_spark.sh", env:
     {
-      "SPARK_VERSION"     => "3.5.0-bin-hadoop3",
-      "SPARK_DOWNLOAD_URL" => "https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz"
+      "SPARK_VERSION"     => "4.1.1-bin-hadoop3",
+      "SPARK_DOWNLOAD_URL" => "https://dlcdn.apache.org/spark/spark-4.1.1/spark-4.1.1-bin-hadoop3.tgz"
     }
   config.vm.provision "install_jupyter", type: "shell", path: "scripts/06_install_jupyter.sh"
   
